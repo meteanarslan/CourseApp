@@ -1,4 +1,6 @@
 <?php
+const title = "Popüler Kurslar";
+
 $kurs1_baslik = "Php Kursu";
 $kurs1_altBaslik = "Sıfırdan ileri seviye web geliştirme";
 $kurs1_resim = "https://img-c.udemycdn.com/course/240x135/3952174_5d3a.jpg";
@@ -20,6 +22,18 @@ $kurs3_yayinTarihi = "30.03.2024";
 $kurs3_yorumSayisi = "110";
 $kurs3_begeniSayisi = "200";
 
+$kurs1_altBaslik = ucfirst(strtolower($kurs1_altBaslik));
+$kurs2_altBaslik = ucfirst(strtolower($kurs2_altBaslik));
+$kurs3_altBaslik = ucfirst(strtolower($kurs3_altBaslik));
+
+$kurs1_altBaslik = substr($kurs1_altBaslik, 0, 50) . "...";
+$kurs2_altBaslik = substr($kurs2_altBaslik, 0, 50) . "...";
+$kurs3_altBaslik = substr($kurs3_altBaslik, 0, 50) . "...";
+
+$kurs1_url = str_replace([" ","ç","."],["-","c","-"],strtolower($kurs1_baslik));
+$kurs2_url = str_replace([" ","ç","."],["-","c","-"],strtolower($kurs2_baslik));
+$kurs3_url = str_replace([" ","ç","."],["-","c","-"],strtolower($kurs3_baslik));
+
 ?>
 
 
@@ -37,6 +51,7 @@ $kurs3_begeniSayisi = "200";
 
 
     <div class="container my-3">
+        <h1 class="mb-3"><?php echo title; ?></h1>
         <div class="card mb-3">
             <div class="row">
                 <div class="col-3">
@@ -45,7 +60,9 @@ $kurs3_begeniSayisi = "200";
                 <div class="col-9">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <?php echo $kurs1_baslik; ?>
+                            <a href="<?php echo $kurs1_url; ?>">
+                                <?php echo $kurs1_baslik; ?>
+                            </a>
                         </h5>
                         <p class="card-text">
                             <?php echo $kurs1_altBaslik; ?>
@@ -72,7 +89,9 @@ $kurs3_begeniSayisi = "200";
                 <div class="col-9">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <?php echo $kurs2_baslik; ?>
+                            <a href="<?php echo $kurs2_url; ?>">
+                                <?php echo $kurs2_baslik; ?>
+                            </a>
                         </h5>
                         <p class="card-text">
                             <?php echo $kurs2_altBaslik; ?>
@@ -99,7 +118,9 @@ $kurs3_begeniSayisi = "200";
                 <div class="col-9">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <?php echo $kurs3_baslik; ?>
+                            <a href="<?php echo $kurs3_url; ?>">
+                                <?php echo $kurs3_baslik; ?>
+                            </a>
                         </h5>
                         <p class="card-text">
                             <?php echo $kurs3_altBaslik; ?>

@@ -32,7 +32,7 @@ $kurslar = array(
     )
 );
 
-$yeni_film = array(
+$yeni_kurs = array(
     "baslik" => "Django Kursu",
     "altBaslik" => "Sıfırdan ileri seviye web geliştirme",
     "resim" => "https://img-c.udemycdn.com/course/240x135/4301499_60fc_3.jpg",
@@ -41,7 +41,7 @@ $yeni_film = array(
     "begeniSayisi" => "200",
 );
 
-$kurslar["4"] = $yeni_film;
+$kurslar["4"] = $yeni_kurs;
 
 $kurs1_altBaslik = ucfirst(strtolower($kurslar["1"]["altBaslik"]));
 $kurs2_altBaslik = ucfirst(strtolower($kurslar["2"]["altBaslik"])); //08:42
